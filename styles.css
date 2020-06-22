@@ -3,4 +3,25 @@
   height: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: 60px 50px 1fr;
+  grid-template-areas:
+  "head"
+  "pageNav"
+  "mainContent";
+}
+
+header {
+  grid-area: head;
+}
+nav {
+  grid-area: pageNav;
+}
+main {
+  grid-area: mainContent;
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+   grid-template-columns: 60px 1fr;
+   grid-template-rows: 60px 1fr;
+   }
 }
