@@ -11,16 +11,51 @@
 
 header {
   grid-area: head;
+  display:grid;
+  grid-template-columns: 4fr .2fr .1fr .2fr;
 }
+.icon-bell {
+  height: 30px;
+  width: 30px;
+}
+.profilepic {
+  height: 30px;
+  width: 30px;
+}
+
 nav {
   grid-area: pageNav;
+}
+.dashboard,
+.members,
+.visits,
+.settings {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
 }
 main {
   grid-area: mainContent;
   grid-area: mainContent;
   display: grid;
-  grid-gap: 2px;
 }
+.half-size-charts,
+.social-media-info,
+.member-info,
+.message-and-settings {
+   display: grid;
+   grid-gap: 2px;
+}
+.half-size-charts,
+.member-info,
+.message-and-settings {
+   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+.traffic {
+  height: 300px;
+  width: 100%;
+}
+
+
 
 @media (min-width: 1024px) {
   .grid-container {
@@ -29,5 +64,8 @@ main {
    grid-template-areas:
    "head head"
    "pageNav mainContent";
+   }
+   .social-media-info {
+   grid-template-columns: repeat(3, 1fr);
    }
 }
