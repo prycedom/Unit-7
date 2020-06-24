@@ -76,8 +76,25 @@ main {
 .message-and-settings {
    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
+/* .twitterBox {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 2fr; this is not working
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "twitterIcon label"
+  "twitterIcon number";
+} */
+.twitterIcon,
+.facebookIcon,
+.googleIcon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: #7477BF;
 
-
+}
 
 
 @media (min-width: 1024px) {
