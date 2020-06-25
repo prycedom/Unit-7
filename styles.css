@@ -76,15 +76,25 @@ main {
 .message-and-settings {
    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
-/* .twitterBox {
+.member1,
+.member2,
+.member3,
+.member4 {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 200px 1fr;
+  grid-template-areas:
+  ".photo .name .date"
+  ".photo .email .date";
+}
+.social1 {
   display: grid;
   height: 100%;
   grid-template-columns: 1fr 2fr; this is not working
   grid-template-rows: 1fr;
   grid-template-areas:
-  "twitterIcon label"
-  "twitterIcon number";
-} */
+  ".twitterIcon .labelNumber";
+}
 .twitterIcon,
 .facebookIcon,
 .googleIcon {
@@ -93,7 +103,6 @@ main {
     border-radius: 50%;
     padding: 2px;
     background-color: #7477BF;
-
 }
 
 
