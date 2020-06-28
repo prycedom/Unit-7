@@ -130,11 +130,11 @@
             <div class="half-size-charts">
               <div class="chart-1">
                 <h2>Daily Traffic</h2>
-                <canvas id="barChart" width="400" height="100px"></canvas>
+                <canvas id="barChart" width="200" height="100px"></canvas>
               </div>
               <div class="chart-2">
                 <h2>Mobile Users</h2>
-                <canvas id="doughnutChart" width="400" height="100px"></canvas>
+                <canvas id="doughnutChart" width="200" height="100px"></canvas>
               </div>
             </div>
             <div class="social-media-info">
@@ -243,6 +243,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
+            lineTension: 0,
             label: [false],
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
@@ -265,6 +266,9 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
+      legend: {
+        display: false
+      },
         scales: {
             yAxes: [{
                 ticks: {
@@ -280,34 +284,38 @@ var ctx = document.getElementById('barChart').getContext('2d');
 var myChart = new Chart(ctx, {
 type: 'bar',
 data: {
- labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+ labels: ['S', 'M', 'T', 'W', 'TH', 'F'],
  datasets: [{
-     label: ['Traffic', 'Hourly', 'Daily', 'Weekly'],
-     data: [12, 19, 3, 5, 2, 3],
+     // label: ['Traffic', 'Hourly', 'Daily', 'Weekly'],
+     data: [50, 75, 150, 100, 200, 180, 75],
      backgroundColor: [
-         'rgba(255, 99, 132, 0.2)',
-         'rgba(54, 162, 235, 0.2)',
-         'rgba(255, 206, 86, 0.2)',
-         'rgba(75, 192, 192, 0.2)',
-         'rgba(153, 102, 255, 0.2)',
-         'rgba(255, 159, 64, 0.2)'
+         '#7477BF',
+         '#7477BF',
+         '#7477BF',
+         '#7477BF',
+         '#7477BF',
+         '#7477BF'
      ],
      borderColor: [
-         'rgba(255, 99, 132, 1)',
-         'rgba(54, 162, 235, 1)',
-         'rgba(255, 206, 86, 1)',
-         'rgba(75, 192, 192, 1)',
-         'rgba(153, 102, 255, 1)',
-         'rgba(255, 159, 64, 1)'
+         '#7477BF',
+         '#7477BF',
+         '#7477BF',
+         '#7477BF',
+         '#7477BF',
+         '#7477BF'
      ],
      borderWidth: 1
  }]
 },
 options: {
+  legend: {
+    display: false
+  },
  scales: {
      yAxes: [{
          ticks: {
-             beginAtZero: true
+             beginAtZero: true,
+             stepSize: 50
          }
      }]
  }
@@ -317,41 +325,48 @@ options: {
 <script>
 var ctx = document.getElementById('doughnutChart').getContext('2d');
 var myChart = new Chart(ctx, {
-type: 'doughnut',
-data: {
- labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
- datasets: [{
-     label: ['Traffic', 'Hourly', 'Daily', 'Weekly'],
-     data: [12, 19, 3, 5, 2, 3],
-     backgroundColor: [
-         'rgba(255, 99, 132, 0.2)',
-         'rgba(54, 162, 235, 0.2)',
-         'rgba(255, 206, 86, 0.2)',
-         'rgba(75, 192, 192, 0.2)',
-         'rgba(153, 102, 255, 0.2)',
-         'rgba(255, 159, 64, 0.2)'
-     ],
-     borderColor: [
-         'rgba(255, 99, 132, 1)',
-         'rgba(54, 162, 235, 1)',
-         'rgba(255, 206, 86, 1)',
-         'rgba(75, 192, 192, 1)',
-         'rgba(153, 102, 255, 1)',
-         'rgba(255, 159, 64, 1)'
-     ],
-     borderWidth: 1
- }]
-},
-options: {
- scales: {
-     yAxes: [{
-         ticks: {
-             beginAtZero: true
-         }
-     }]
- }
-}
-});
+            type: 'doughnut',
+            data: {
+                labels: ['Person', 'Tablets', 'Desktop'],
+                datasets: [{
+                    data: [12, 19, 3],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 206, 86)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                legend: {
+                    position: 'right'
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                          display: false
+                        },
+                        gridLines: {
+                            display: false
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                          display: false
+                        },
+                        gridLines: {
+                            display: false
+                        }
+                    }]
+                }
+            }
+        });
 </script>
   </body>
 </html>

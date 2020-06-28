@@ -73,16 +73,11 @@ main {
 .message-and-settings {
    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
-trafficNav {
+.trafficNav {
   grid-area: trafficNav;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-auto-rows: 1fr;
-  grid-template-areas:
-  ""
-}
-traffic {
-  grid-area: traffic;
 }
 
 .member1,
