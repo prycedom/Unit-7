@@ -80,7 +80,7 @@ main {
 .member3,
 .member4 {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: .3fr 1fr .5fr;
   grid-template-rows: 1fr;
   grid-template-areas:
   "photo name date";
@@ -94,7 +94,10 @@ main {
 .date {
   grid-area: date;
 }
-.social1 {
+.social-1,
+.social-2,
+.social-3,
+.social-4 {
   display: grid;
   height: 100%;
   grid-template-columns: 1fr 2fr; this is not working
@@ -102,6 +105,13 @@ main {
   grid-template-areas:
   "twitterIcon labelNumber";
 }
+.twitterIcon{
+  grid-area: twitterIcon;
+}
+.labelNumber {
+  grid-area: labelNumber;
+}
+
 .twitterIcon,
 .facebookIcon,
 .googleIcon {
