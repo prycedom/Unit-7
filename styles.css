@@ -80,20 +80,16 @@ main {
 .member3,
 .member4 {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-areas:
-  "photo name date"
-  "photo email date";
+  "photo name date";
 }
 .photo {
   grid-area: photo;
 }
 .name {
   grid-area: name;
-}
-.email {
-  grid-area: email;
 }
 .date {
   grid-area: date;
