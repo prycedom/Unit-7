@@ -109,10 +109,18 @@
           <main>
             <div class="dash-top"></div>
             <div class="full-size-chart">
-              <h2>Traffic</h2>
+              <h1>Dashboard</h1>
               <div class="alert">
                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                  ALERT!
+              </div>
+              <div class="trafficNav">
+                  <h2>Traffic</h2>
+                  <h2>Hourly</h2>
+                  <h2>Daily</h2>
+                  <h2>Weekly</h2>
+                  <h2>Monthly</h2>
+              </div>
               </div>
               <canvas id="lineChart" width="400" height="100px"></canvas>
 
@@ -231,7 +239,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
-            // label: ['Traffic'],
+            label: [false],
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
