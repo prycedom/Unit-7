@@ -13,10 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"> -->
   </head>
   <body>
-          <div class="alert">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-            Alert!  ALERT!  Alert!  ALERT!
-          </div>
       <div class="grid-container">
           <header>
               <h2>TrafficApp</h2>
@@ -113,14 +109,21 @@
           <main>
             <div class="dash-top"></div>
             <div class="full-size-chart">
+              <h2>Traffic</h2>
+              <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                 ALERT!
+              </div>
               <canvas id="lineChart" width="400" height="100px"></canvas>
 
             </div>
             <div class="half-size-charts">
               <div class="chart-1">
+                <h2>Daily Traffic</h2>
                 <canvas id="barChart" width="400" height="100px"></canvas>
               </div>
               <div class="chart-2">
+                <h2>Mobile Users</h2>
                 <canvas id="doughnutChart" width="400" height="100px"></canvas>
               </div>
             </div>
