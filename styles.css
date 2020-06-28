@@ -61,7 +61,6 @@ nav {
 }
 main {
   grid-area: mainContent;
-  grid-area: mainContent;
   display: grid;
 }
 .half-size-charts,
