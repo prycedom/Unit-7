@@ -83,8 +83,14 @@ main {
   grid-template-columns: 1fr 2fr 2fr;
   grid-template-rows: 200px 1fr;
   grid-template-areas:
-  ".photo .name .date"
-  ".photo .email .date";
+  "photo name date"
+  "photo email date";
+}
+.photo {
+  grid-area: photo;
+}
+.name {
+  grid-area: name;
 }
 .social1 {
   display: grid;
@@ -92,7 +98,7 @@ main {
   grid-template-columns: 1fr 2fr; this is not working
   grid-template-rows: 1fr;
   grid-template-areas:
-  ".twitterIcon .labelNumber";
+  "twitterIcon labelNumber";
 }
 .twitterIcon,
 .facebookIcon,
