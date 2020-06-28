@@ -81,7 +81,7 @@ main {
 .member4 {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: 100px 1fr;
   grid-template-areas:
   "photo name date"
   "photo email date";
@@ -91,6 +91,12 @@ main {
 }
 .name {
   grid-area: name;
+}
+.email {
+  grid-area: email;
+}
+.date {
+  grid-area: date;
 }
 .social1 {
   display: grid;
