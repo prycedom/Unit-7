@@ -54,8 +54,8 @@ nav {
 .members,
 .visits,
 .settings {
-  display: grid;
-  grid-template-rows: 1fr;
+ width: 30px;
+ margin: 10px;
 }
 main {
   grid-area: mainContent;
@@ -76,17 +76,22 @@ main {
 .trafficNav {
   grid-area: trafficNav;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
-
+.trafficFilters {
+  justify-self: right;
+}
+.trafficFilters span {
+  margin-right: 10px;
+}
 .member1,
 .member2,
 .member3,
 .member4 {
   display: grid;
   grid-template-columns: .3fr 1fr .5fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
   "photo name date";
 }
