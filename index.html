@@ -255,28 +255,38 @@
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'],
                 datasets: [{
                     lineTension: 0,
                     label: [false],
-                    data: [12, 19, 3, 5, 2, 3],
+                    data: [12, 19, 3, 5, 2, 3, 18, 15, 2, 8, 10],
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
+                        'rgba(108, 108, 211, 0.2)',
+                        'rgba(108, 108, 211, 0.2)',
+                        'rgba(108, 108, 211, 0.2)',
+                        'rgba(108, 108, 211, 0.2)',
+                        'rgba(108, 108, 211, 0.2)',
+                        'rgba(108, 108, 211, 0.2)',
+                        'rgba(108, 108, 211, 0.2)',
+                        'rgba(108, 108, 211, 0.2)',
+                        'rgba(108, 108, 211, 0.2)',
+                        'rgba(108, 108, 211, 0.2)',
+                        'rgba(108, 108, 211, 0.2)'
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        '#4D4C71',
+                        '#4D4C71',
+                        '#4D4C71',
+                        '#4D4C71',
+                        '#4D4C71',
+                        '#4D4C71',
+                        '#4D4C71',
+                        '#4D4C71',
+                        '#4D4C71',
+                        '#4D4C71',
+                        '#4D4C71'
                     ],
-                    borderWidth: 1
+                    borderWidth: 4
                 }]
             },
             options: {
@@ -341,18 +351,18 @@
         var myChart = new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: ['Person', 'Tablets', 'Desktop'],
+                labels: ['Phones', 'Tablets', 'Desktop'],
                 datasets: [{
                     data: [12, 19, 3],
                     backgroundColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(54, 162, 235)',
-                        'rgb(255, 206, 86)'
+                        '#7477BF',
+                        'rgba(108, 108, 211, 0.2)',
+                        '#7477AA'
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)'
+                        '#7477BF',
+                        'rgba(108, 108, 211, 0.2)',
+                        '#7477AA'
                     ],
                     borderWidth: 1
                 }]
