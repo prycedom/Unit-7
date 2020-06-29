@@ -53,8 +53,7 @@ nav {
 }
 .dashboard,
 .members,
-.visits,
-.settings {
+.visits {
  width: 30px;
  margin: 10px;
 }
@@ -178,6 +177,24 @@ main {
 
 .twitterIcon {
   margin-top: 5px;
+}
+.search {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas:
+   "searchUser",
+   "messageUser",
+   "send"
+}
+searchUser {
+  grid-area: searchUser;
+}
+messageUser {
+  grid-area: messageUser;
+}
+send {
+  grid-area: send;
 }
 
 
