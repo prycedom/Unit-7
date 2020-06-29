@@ -85,24 +85,39 @@ main {
 .trafficFilters span {
   margin-right: 10px;
 }
+
+.social-media-info {
+  padding: 25px;
+}
+
 .member1,
 .member2,
 .member3,
 .member4 {
   display: grid;
-  grid-template-columns: .3fr 1fr .5fr;
+  grid-template-columns: auto 1fr .5fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-  "photo name date";
+  "photo name date"
+  "photo email date";
+  margin: 10px;
+  border-bottom: 1px solid rgba(56, 56, 56, 0.5);
+  padding: 10px;
 }
 .photo {
   grid-area: photo;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 .name {
   grid-area: name;
 }
 .date {
   grid-area: date;
+  align-self: center;
+  justify-self: right;
 }
 .social-1,
 .social-2,
@@ -110,14 +125,44 @@ main {
 .social-4 {
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr 2fr; this is not working
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
-  "twitterIcon labelNumber";
+  "twitterIcon socialName"
+  "twitterIcon socialCount";
+  justify-items: center;
+  align-items: center;
+  margin: 0 15px 0 15px;
+  background-color: rgb(240, 240, 240);
+  padding: 10px;
 }
-.twitterIcon{
+
+.socialCount {
+  grid-area: socialCount;
+  justify-self: left;
+  align-self: start;
+  font-size: 2em;
+}
+
+.socialName {
+  grid-area: socialName;
+  justify-self: left;
+  align-self: end;
+}
+
+.icon-circle {
+  justify-self: right;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  background-color: #7477BF;
   grid-area: twitterIcon;
 }
+
 .labelNumber {
   grid-area: labelNumber;
 }
@@ -125,11 +170,13 @@ main {
 .twitterIcon,
 .facebookIcon,
 .googleIcon {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+    height: 40px;
+    width: 40px;
     padding: 2px;
-    background-color: #7477BF;
+}
+
+.twitterIcon {
+  margin-top: 5px;
 }
 
 

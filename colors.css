@@ -1,41 +1,36 @@
 * {
-	box-sizing:border-box;
-	margin:0;
-	padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 body {
-	height: 100vh;
+    height: 100vh;
 }
 .dash-top,
 .full-size-chart,
 .half-size-charts,
 .social-media-info,
 .member-info,
+.member-info-title,
 .message-and-settings {
-	background: rgba(169, 148, 202, 0.2);
+    background: rgba(169, 148, 202, 0.2);
 }
 
-
-
-.members-1,
-.members-2 {
-	background: rgba(169, 148, 202, 0.2);
-}
 .social-1,
 .social-2,
 .social-3,
 .message,
 .settings {
-	background: rgba(108, 108, 211, 0.2);
+    background: rgba(108, 108, 211, 0.2);
 }
 
 
 header {
-	background: #7477BF;
+    background: #7477BF;
 }
 nav {
-	background: #4D4C71;
+    background: #4D4C71;
 }
 main {
-	background: white;
+    background: white;
 }
