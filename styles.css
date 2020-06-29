@@ -53,7 +53,8 @@ nav {
 }
 .dashboard,
 .members,
-.visits {
+.visits,
+.settings {
  width: 30px;
  margin: 10px;
 }
@@ -196,6 +197,32 @@ messageUser {
 send {
   grid-area: send;
 }
+.settingOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+   "sendEmailNotifications sendEmailNotifications",
+   "setProfilePublic setProfilePublic",
+   "selectTimeZone selectTimeZone",
+   "save cancel"
+}
+sendEmailNotifications {
+  grid-area: sendEmailNotifications;
+}
+setProfilePublic {
+  grid-area: setProfilePulic;
+}
+selectTimeZone {
+  grid-area: selectTimeZone;
+}
+save {
+  grid-area: save;
+}
+cancel {
+  grid-area: cancel;
+}
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -258,6 +285,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
 
 @media (min-width: 1024px) {
   .grid-container {
