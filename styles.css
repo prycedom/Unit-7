@@ -162,8 +162,7 @@ main {
 }
 .social-1,
 .social-2,
-.social-3,
-.social-4 {
+.social-3 {
   display: grid;
   height: 100%;
   grid-template-columns: 1fr 1fr;
@@ -237,6 +236,32 @@ messageUser {
 send {
   grid-area: send;
 }
+.searchUser {
+  margin: 35px;
+  height: 75px;
+  border-radius: 10px;
+}
+.searchUser::placeholder {
+  padding-left: 10px;
+  /* vertical-align: text-top;
+  line-height: 200px; */
+}
+.messageUser {
+  margin: 35px;
+  border-radius: 10px;
+}
+.messageUser::placeholder {
+  padding-left: 10px;
+}
+
+.send {
+  margin: 35px;
+  height: 75px;
+  border-radius: 20px;
+  background-color: #4D4C71;
+  color: white;
+}
+
 .settingOptions {
   display: grid;
   grid-template-columns: 1fr 1fr;
