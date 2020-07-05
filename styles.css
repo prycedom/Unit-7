@@ -1,3 +1,7 @@
+body {
+  font-family: Sans-Serif;
+}
+
 .grid-container {
   display: grid;
   height: 100%;
@@ -127,6 +131,23 @@ main {
   margin-right: 10px;
 }
 
+.trafficFilters ul {
+  list-style: none;
+  display: flex;
+  margin-right: 10px;
+}
+
+.trafficFilters ul li {
+  margin-right: 10px;
+  padding: 4px 8px;
+}
+
+.active-filter {
+  color: white;
+  background-color: #4D4C71;
+  border-radius: 10px;
+}
+
 .social-media-info {
   padding: 25px;
 }
@@ -145,6 +166,20 @@ main {
   border-bottom: 1px solid rgba(56, 56, 56, 0.5);
   padding: 10px;
 }
+.member1A,
+.member2B,
+.member3C,
+.member4D {
+  display: grid;
+  grid-template-columns: auto 1fr .5fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "photo comment comment"
+  "photo time .";
+  margin: 10px;
+  border-bottom: 1px solid rgba(56, 56, 56, 0.5);
+  padding: 10px;
+}
 .photo {
   grid-area: photo;
   height: 50px;
@@ -159,6 +194,12 @@ main {
   grid-area: date;
   align-self: center;
   justify-self: right;
+}
+.comment {
+  grid-area: comment;
+}
+.time {
+  grid-area: time;
 }
 .social-1,
 .social-2,
@@ -236,8 +277,13 @@ messageUser {
 send {
   grid-area: send;
 }
+
+.message-header {
+  margin: 15px 15px 0 15px;
+}
+
 .searchUser {
-  margin: 35px;
+  margin: 15px 15px 0 15px;
   height: 75px;
   border-radius: 10px;
 }
@@ -247,7 +293,7 @@ send {
   line-height: 200px; */
 }
 .messageUser {
-  margin: 35px;
+  margin: 15px;
   border-radius: 10px;
 }
 .messageUser::placeholder {
@@ -255,7 +301,7 @@ send {
 }
 
 .send {
-  margin: 35px;
+  margin: 0 15px 15px 15px;
   height: 75px;
   border-radius: 20px;
   background-color: #4D4C71;
@@ -267,8 +313,8 @@ send {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas:
-   "sendEmailNotifications sendEmailNotifications",
-   "setProfilePublic setProfilePublic",
+   "sendEmailNotifications slider",
+   "setProfilePublic slider",
    "selectTimeZone selectTimeZone",
    "save cancel"
 }
@@ -311,7 +357,7 @@ cancel {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #4D4C71;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -329,11 +375,11 @@ cancel {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #7477BF;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #7477BF;
 }
 
 input:checked + .slider:before {
