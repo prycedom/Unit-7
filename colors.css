@@ -24,6 +24,10 @@ body {
     background: rgba(108, 108, 211, 0.2);
 }
 
+#settings-save {
+    background-color: #4D4C71;
+    color: white;
+}
 
 header {
     background: #7477BF;

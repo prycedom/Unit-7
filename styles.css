@@ -16,8 +16,84 @@ body {
   padding: 20px;
   background-color: #7477AA;
   color: white;
-  margin-bottom: 15px;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
 }
+.alert-bold {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.dash-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 75px;
+}
+
+.tab-title {
+  justify-self: center;
+  align-self: center;
+  margin: 0 5px;
+}
+
+.tab-background {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: white;
+}
+
+.searchBarContainer {
+  position: relative;
+  padding-right: 20px;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+.search-icon {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+
+#searchBar {
+  height: 35px;
+  width: 350px;
+  padding: 10px;
+}
+
 .closebtn {
   margin-left: 15px;
   color: white;
@@ -31,13 +107,25 @@ body {
 header {
   grid-area: head;
   display:grid;
-  grid-template-columns: 4fr .2fr .1fr .2fr;
+  grid-template-columns: 4fr .2fr .1fr auto;
 }
+
+.brand {
+  margin: 0 10px;
+  align-self: center;
+}
+
+.user-name {
+  margin: 0 10px;
+  align-self: center;
+  margin-top: 0;
+}
+
 .icon-bell {
   margin-top: 15px;
   height: 30px;
   width: 30px;
-  transition: height width 2s:
+  transition: all 0.5s;
 }
 .icon-bell:hover {
   height: 45px;
@@ -50,6 +138,7 @@ header {
   width: 200px;
   border: 1px solid black;
   display: grid;
+  z-index: 100;
 }
 
 .notification-pop-up-hidden {
@@ -88,9 +177,9 @@ h4 {
 }
 nav {
   grid-area: pageNav;
-  display: grid;
-  align-content: start;
-  justify-content: center;
+  display: grid;  
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr
 }
 .dashboard,
 .members,
@@ -262,20 +351,7 @@ main {
 .search {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
-  grid-template-areas:
-   "searchUser",
-   "messageUser",
-   "send"
-}
-searchUser {
-  grid-area: searchUser;
-}
-messageUser {
-  grid-area: messageUser;
-}
-send {
-  grid-area: send;
+  grid-template-rows: 0.5fr 2fr 1fr;
 }
 
 .message-header {
@@ -284,54 +360,83 @@ send {
 
 .searchUser {
   margin: 15px 15px 0 15px;
-  height: 75px;
+  position: relative;
+}
+
+.searchUser input {
   border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 5px;
 }
-.searchUser::placeholder {
-  padding-left: 10px;
-  /* vertical-align: text-top;
-  line-height: 200px; */
-}
+
 .messageUser {
-  margin: 15px;
+  margin: 15px 15px 5px 15px;
   border-radius: 10px;
-}
-.messageUser::placeholder {
   padding-left: 10px;
+  padding-top: 10px;
+}
+
+#messageUser-error {
+  margin-left: 15px;
+}
+
+#message-send-confirmation {
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+.error {
+  color: red;
 }
 
 .send {
   margin: 0 15px 15px 15px;
-  height: 75px;
+  height: 50px;
   border-radius: 20px;
   background-color: #4D4C71;
   color: white;
 }
 
+.settingsBox {
+  padding: 15px;
+}
+
+.settings-title {
+  margin-bottom: 15px;
+}
+
+.settingsBox {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
 .settingOptions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(4, 1fr);
-  grid-template-areas:
-   "sendEmailNotifications slider",
-   "setProfilePublic slider",
-   "selectTimeZone selectTimeZone",
-   "save cancel"
 }
-sendEmailNotifications {
-  grid-area: sendEmailNotifications;
+
+#timezone {
+  grid-column: 1 / span 4;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
 }
-setProfilePublic {
-  grid-area: setProfilePulic;
+
+#settings-save {
+  margin-right: 8px;    
 }
-selectTimeZone {
-  grid-area: selectTimeZone;
+
+#settings-cancel {
+  margin-left: 8px;
 }
-save {
-  grid-area: save;
-}
-cancel {
-  grid-area: cancel;
+
+.settings-button {
+  border-radius: 20px;
+  height: 50px;
+  align-self: end;
+  grid-column-end: span 2;
 }
 
 /* The switch - the box around the slider */
@@ -340,6 +445,11 @@ cancel {
   display: inline-block;
   width: 60px;
   height: 34px;
+  grid-column-end: span 2;
+}
+
+.switch-label {
+  grid-column-end: span 2;
 }
 
 /* Hide default HTML checkbox */
@@ -408,5 +518,20 @@ input:checked + .slider:before {
    }
    .social-media-info {
    grid-template-columns: repeat(3, 1fr);
+   }
+
+   nav {
+    align-content: start;
+    justify-content: center;
+    grid-template-columns: 1fr;
+   }
+
+   .dash-top {
+    grid-template-columns: 1fr 5fr;
+    height: 75px;
+   }
+
+   .tab-background {
+    justify-content: flex-end;
    }
 }

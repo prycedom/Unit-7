@@ -7,12 +7,13 @@
     <title>CSS Grid Layout Starer Files</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="colors.css">
+    <script src="https://kit.fontawesome.com/1d8fef5a0c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="grid-container">
         <header>
-            <h2>TrafficApp</h2>
+            <h2 class="brand">TrafficApp</h2>
             <a href="#">
                 <img id="notifications-icon" class="icon-bell" src="icons/icon-bell.svg">
                 <div id="notifications" class="notification-pop-up notification-pop-up-hidden">
@@ -31,22 +32,30 @@
                 </div>
             </a>
             <img class="profilepic" src="images/member-1.jpg" alt="profile photo">
-            <h4>Kasey P</h4>
+            <h4 class="user-name">Kasey P</h4>
         </header>
         <nav>
             <img class="dashboard" src="icons/icon-dashboard.svg">
             <img class="members" src="icons/icon-members.svg">
             <img class="visits" src="icons/icon-visits.svg">
-            <img class="settings"src="icons//icon-settings.svg">
+            <img class="settings" src="icons//icon-settings.svg">
         </nav>
 
         <main>
-            <div class="dash-top"></div>
+            <div class="dash-top">
+                <h1 class="tab-title">Dashboard</h1>
+                <div class="tab-background">
+                    <div class="searchBarContainer">
+                        <input id="searchBar" type="text" placeholder="Search">
+                        <i class="search-icon fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
             <div class="full-size-chart">
-                <h1>Dashboard</h1>
                 <div class="alert">
+                    <span class="alert-bold">Alert</span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod, sem sit amet dictum interdum, elit sem volutpat diam, sed egestas
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                    ALERT!
                 </div>
 
                 <div class="trafficNav">
@@ -156,41 +165,46 @@
                 </div>
             </div>
             <div class="message-and-settings">
-              <div class="message">
-                <h2 class="message-header">Message User</h2>
-                <form class="search" action="index.html" method="post">
-                  <input class="searchUser" type="text" name="searchUser" placeholder="Search for User">
-                  <input class="messageUser" type="text" name="messageUser" placeholder="Message for User">
-                  <input class="send" type="submit" name="send" value="SEND">
-                </form>
-              </div>
-              <div class="settingsBox">
-                <h2>Settings</h2>
-                <form class="settingOptions" action="index.html" method="post">
-                  <label for="sendEmailNotifications">Send email notifications</label>
-                  <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                  <label for="setProfilePublic">Set profile to public</label>
-                  <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                  <label for="selectTimeZone">Select a Timezone:</label>
+                <div class="message">
+                    <h2 class="message-header">Message User</h2>
+                    <form class="search" action="index.html" method="post">
+                        <div class="searchUser">
+                            <input id="searchUser" class="autocomplete" type="text" name="searchUser" placeholder="Search for User">
+                            <p id="searchUser-error" class="error"></p>
+                        </div>
+                        <textarea id="messageUser" class="messageUser" name="messageUser" placeholder="Message for User"></textarea>
+                        <p id="messageUser-error" class="error"></p>
+                        <p id="message-send-confirmation"></p>
+                        <input id="message-send" class="send" type="submit" name="send" value="SEND">
+                    </form>
+                </div>
+                <div class="settingsBox">
+                    <h2 class="settings-title">Settings</h2>
+                    <form class="settingOptions" action="index.html" method="post">
+                        <label class="switch-label" for="sendEmailNotifications">Send email notifications</label>
+                        <label class="switch">
+                            <input id="send-email-notifications" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <label class="switch-label" for="setProfilePublic">Set profile to public</label>
+                        <label class="switch">
+                            <input id="profile-visibility" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
                         <select name="timezone" id="timezone">
-                        <option value="eastern">Eastern</option>
-                        <option value="central">Central</option>
-                        <option value="mountain">Mountain</option>
-                        <option value="pacific">Pacific</option>
+                            <option value="">Select a Timezone</option>
+                            <option value="eastern">Eastern</option>
+                            <option value="central">Central</option>
+                            <option value="mountain">Mountain</option>
+                            <option value="pacific">Pacific</option>
                         </select>
-                  <input type="button" name="save" value="SAVE">
-                  <input type="button" name="cancel" value="CANCEL">
-                </div>   
+                        <input id="settings-save" class="settings-button" type="button" name="save" value="SAVE">
+                        <input id="settings-cancel" class="settings-button" type="button" name="cancel" value="CANCEL">
+                </div>
                 </form>
-              </div>
             </div>
-        </main>
+    </div>
+    </main>
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
@@ -285,6 +299,7 @@
         });
     </script>
     <script src="js/index.js"></script>
+    <script src="js/autoComplete.js"></script>
 </body>
 
 </html>
