@@ -21,7 +21,9 @@ document.getElementById("settings-save").addEventListener("click", () => {
 });
 
 document.getElementById("settings-cancel").addEventListener("click", () => {
-    loadSettings();
+  localStorage.setItem("profileVisibility", profileVisibility.checked = false);
+  localStorage.setItem("sendEmailNotifications", sendEmailNotifications.checked = false);
+  localStorage.setItem("timezone", timezone.value = true);
 });
 
 searchUser.addEventListener("keyup", () => {
@@ -41,7 +43,7 @@ sendMessage.addEventListener("click", (e) => {
         searchUserError.innerHTML = "This has to have a value.";
         hasErrors = true;
     }
-    
+
     if(!messageUser.value) {
         messageUserError.innerHTML = "This has to have a value.";
         hasErrors = true;

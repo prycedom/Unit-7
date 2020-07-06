@@ -95,6 +95,6 @@ function autocomplete(inp, arr) {
     });
   }
 
-  var names = ["Dan Oliver", "Dawn Wood"];
+  var names = ["Victoria Chambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
 
   autocomplete(document.getElementById("searchUser"), names);
