@@ -240,7 +240,7 @@
                     <h2 class="message-header">Message User</h2>
                     <form class="search" action="index.html" method="post">
                         <div class="searchUser">
-                            <input id="searchUser" class="autocomplete" type="text" name="searchUser" placeholder="Search for User">
+                            <input id="searchUser" class="autocomplete" type="text" name="searchUser" placeholder="Search for User" autocomplete="off">
                             <p id="searchUser-error" class="error"></p>
                         </div>
                         <textarea id="messageUser" class="messageUser" name="messageUser" placeholder="Message for User"></textarea>
@@ -263,7 +263,7 @@
                             <span class="slider round"></span>
                         </label>
                         <select name="timezone" id="timezone">
-                            <option selected="selected">Select a Timezone</option>
+                            <option value="timezone" selected>Select a Timezone</option>
                             <option value="eastern">Eastern</option>
                             <option value="central">Central</option>
                             <option value="mountain">Mountain</option>

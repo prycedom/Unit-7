@@ -23,7 +23,8 @@ document.getElementById("settings-save").addEventListener("click", () => {
 document.getElementById("settings-cancel").addEventListener("click", () => {
   localStorage.setItem("profileVisibility", profileVisibility.checked = false);
   localStorage.setItem("sendEmailNotifications", sendEmailNotifications.checked = false);
-  localStorage.setItem("timezone", timezone.value = true);
+  localStorage.setItem("timezone","timezone");
+  loadSettings();
 });
 
 searchUser.addEventListener("keyup", () => {
@@ -62,7 +63,7 @@ sendMessage.addEventListener("click", (e) => {
 function loadSettings() {
     profileVisibility.checked = (localStorage.getItem("profileVisibility") == "true");
     sendEmailNotifications.checked = (localStorage.getItem("sendEmailNotifications") == "true");
-    timezone.value = localStorage.getItem("timezone");
+    timezone.value = localStorage.getItem("timezone") ? localStorage.getItem("timezone") : "timezone";
 }
 
 loadSettings();
